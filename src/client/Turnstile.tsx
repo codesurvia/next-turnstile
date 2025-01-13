@@ -51,9 +51,8 @@ export const Turnstile: React.FC<TurnstileProps> = ({
     if (!existingScript) {
       const script = document.createElement("script");
       script.id = scriptId;
-      script.src = sandbox
-        ? "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onloadTurnstileCallback"
-        : "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      script.src =
+        "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onloadTurnstileCallback";
       script.async = true;
       script.defer = true;
 

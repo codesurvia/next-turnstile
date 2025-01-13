@@ -7,9 +7,7 @@ export async function validateTurnstileToken({
   idempotencyKey,
   sandbox = false,
 }: TurnstileValidateOptions): Promise<TurnstileValidateResponse> {
-  const endpoint = sandbox
-    ? "https://challenges.cloudflare.com/turnstile/v0/siteverify"
-    : "https://challenges.cloudflare.com/turnstile/v0/siteverify";
+  const endpoint = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
 
   const formData = new URLSearchParams({
     secret: sandbox ? "1x0000000000000000000000000000000AA" : secretKey,
