@@ -78,23 +78,23 @@ async function validateToken(token: string) {
 
 ### Turnstile Component Props
 
-| Prop             | Type                                          | Default              | Description                         |
-| ---------------- | --------------------------------------------- | -------------------- | ----------------------------------- |
-| `siteKey`        | `string`                                      | Required             | Your Cloudflare Turnstile site key  |
-| `onVerify`       | `(token: string) => void`                     | -                    | Callback when verification succeeds |
-| `onError`        | `(error: unknown) => void`                    | -                    | Callback when an error occurs       |
-| `onExpire`       | `() => void`                                  | -                    | Callback when the token expires     |
-| `onLoad`         | `() => void`                                  | -                    | Callback when the widget loads      |
-| `theme`          | `'light' \| 'dark' \| 'auto'`                 | `'auto'`             | Widget theme                        |
-| `size`           | `'normal' \| 'compact'`                       | `'normal'`           | Widget size                         |
-| `appearance`     | `'always' \| 'execute' \| 'interaction-only'` | `'always'`           | When to show the widget             |
-| `retry`          | `'auto' \| 'never'`                           | `'auto'`             | Retry behavior on failure           |
-| `retryInterval`  | `number`                                      | `8000`               | Milliseconds between retries        |
-| `refreshExpired` | `'auto' \| 'manual' \| 'never'`               | `'auto'`             | Token refresh behavior              |
-| `language`       | `string`                                      | -                    | Widget language code                |
-| `id`             | `string`                                      | `'turnstile-widget'` | Container element ID                |
-| `className`      | `string`                                      | -                    | Additional CSS classes              |
-| `sandbox`        | `boolean`                                     | `false`              | Enable sandbox mode                 |
+| Prop             | Type                                                                    | Default              | Description                         |
+|------------------|-------------------------------------------------------------------------|----------------------|-------------------------------------|
+| `siteKey`        | `string`                                                                | Required             | Your Cloudflare Turnstile site key  |
+| `onVerify`       | `(token: string) => void`                                               | -                    | Callback when verification succeeds |
+| `onError`        | `(error: unknown) => void`                                              | -                    | Callback when an error occurs       |
+| `onExpire`       | `() => void`                                                            | -                    | Callback when the token expires     |
+| `onLoad`         | `() => void`                                                            | -                    | Callback when the widget loads      |
+| `theme`          | `'light' \| 'dark' \| 'auto'`                                           | `'auto'`             | Widget theme                        |
+| `size`           | `'normal' \| 'compact'`                                                 | `'normal'`           | Widget size                         |
+| `appearance`     | `'always' \| 'execute' \| 'interaction-only'`                           | `'always'`           | When to show the widget             |
+| `retry`          | `'auto' \| 'never'`                                                     | `'auto'`             | Retry behavior on failure           |
+| `retryInterval`  | `number`                                                                | `8000`               | Milliseconds between retries        |
+| `refreshExpired` | `'auto' \| 'manual' \| 'never'`                                         | `'auto'`             | Token refresh behavior              |
+| `language`       | `string`                                                                | -                    | Widget language code                |
+| `id`             | `string`                                                                | `'turnstile-widget'` | Container element ID                |
+| `className`      | `string`                                                                | -                    | Additional CSS classes              |
+| `sandbox`        | `boolean` \| `pass` \| `block` \| `pass-invisible` \| `block-invisible` | `false`              | Enable sandbox mode                 |
 
 ### Server Validation Options
 

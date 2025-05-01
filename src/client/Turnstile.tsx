@@ -70,13 +70,28 @@ export const Turnstile: React.FC<TurnstileProps> = ({
     return cleanup;
   }, [siteKey, sandbox]);
 
+  const sandboxDummyKey = () => {
+    switch (sandbox) {
+      case "pass":
+        return "1x00000000000000000000AA";
+      case "block":
+        return "2x00000000000000000000AB";
+      case "pass-invisible":
+        return "1x00000000000000000000BB";
+      case "block-invisible":
+        return "2x00000000000000000000BB";
+    }
+
+    return "1x00000000000000000000AA";
+  };
+
   const renderWidget = () => {
     if (!containerRef.current || !window.turnstile) return;
 
     cleanup();
 
     widgetRef.current = window.turnstile.render(containerRef.current, {
-      sitekey: sandbox ? "1x00000000000000000000AA" : siteKey,
+      sitekey: sandbox ? sandboxDummyKey() : siteKey,
       callback: onVerify,
       "error-callback": onError,
       "expired-callback": onExpire,

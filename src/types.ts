@@ -18,7 +18,7 @@ export interface TurnstileProps {
   execution?: "render" | "execute";
   cData?: string;
   language?: string;
-  sandbox?: boolean;
+  sandbox?: "pass" | "block" | "pass-invisible" | "block-invisible" | boolean;
 }
 
 export interface TurnstileValidateOptions {
