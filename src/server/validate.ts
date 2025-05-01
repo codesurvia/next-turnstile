@@ -9,8 +9,21 @@ export async function validateTurnstileToken({
 }: TurnstileValidateOptions): Promise<TurnstileValidateResponse> {
   const endpoint = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
 
+  const sandboxDummyKey = () => {
+    switch (sandbox) {
+      case "pass":
+        return "1x0000000000000000000000000000000AA";
+      case "fail":
+        return "2x0000000000000000000000000000000AA";
+      case "error":
+        return "3x0000000000000000000000000000000AA";
+    }
+
+    return "1x0000000000000000000000000000000AA";
+  };
+
   const formData = new URLSearchParams({
-    secret: sandbox ? "1x0000000000000000000000000000000AA" : secretKey,
+    secret: sandbox ? sandboxDummyKey() : secretKey,
     response: token,
     ...(remoteip && { remoteip }),
     ...(idempotencyKey && { idempotency_key: idempotencyKey }),

@@ -26,7 +26,7 @@ export interface TurnstileValidateOptions {
   secretKey: string;
   remoteip?: string;
   idempotencyKey?: string;
-  sandbox?: boolean;
+  sandbox?: "pass" | "fail" | "error" | boolean;
 }
 
 export interface TurnstileValidateResponse {
