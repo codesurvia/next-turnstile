@@ -1,6 +1,6 @@
 {
   "name": "next-turnstile",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Cloudflare Turnstile integration for Next.js applications",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
