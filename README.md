@@ -98,13 +98,13 @@ async function validateToken(token: string) {
 
 ### Server Validation Options
 
-| Option           | Type      | Required | Description               |
-| ---------------- | --------- | -------- | ------------------------- |
-| `token`          | `string`  | Yes      | The token from the client |
-| `secretKey`      | `string`  | Yes      | Your Turnstile secret key |
-| `remoteip`       | `string`  | No       | User's IP address         |
-| `idempotencyKey` | `string`  | No       | Unique request identifier |
-| `sandbox`        | `boolean` | No       | Enable sandbox mode       |
+| Option           | Type                                    | Required | Description               |
+|------------------|-----------------------------------------|----------|---------------------------|
+| `token`          | `string`                                | Yes      | The token from the client |
+| `secretKey`      | `string`                                | Yes      | Your Turnstile secret key |
+| `remoteip`       | `string`                                | No       | User's IP address         |
+| `idempotencyKey` | `string`                                | No       | Unique request identifier |
+| `sandbox`        | `boolean`\| `pass` \| `fail` \| `error` | No       | Enable sandbox mode       |
 
 ## Advanced Usage
 
