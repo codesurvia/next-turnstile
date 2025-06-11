@@ -1,5 +1,5 @@
 {
-  "name": "next-turnstile",
+  "name": "@codesurvia/next-turnstile",
   "version": "1.0.4",
   "description": "Cloudflare Turnstile integration for Next.js applications",
   "main": "dist/index.js",
